@@ -1,6 +1,11 @@
 import React from 'react'
 import LightLogo from '../assets/logo_light.png'
 import DarkLogo from '../assets/logo_dark.png'
+import { RiSettings4Fill } from 'react-icons/ri';
+import { IoSearchSharp } from 'react-icons/io5';
+import { AiFillProfile } from 'react-icons/ai'
+import { IconContext } from 'react-icons';
+//import { FormGroup, FormControlLabel, Switch } from '@material-ui/core';
 
 class Greeting extends React.Component {
   constructor(props){
@@ -27,8 +32,33 @@ class Greeting extends React.Component {
             <img src={this.state.theme === "light" ? LightLogo : DarkLogo} alt="EngineSpace Logo"/>
           </div>
         </div>
+        <div className="control_panel">
+          <div className="control_icon">
+            <IconContext.Provider
+                value={{size: '2.3vmin', fontWeight: 500 }}
+              >
+              <AiFillProfile />
+            </IconContext.Provider>
+          </div>
+          <div className="control_icon">
+            <IconContext.Provider
+                value={{size: '2.3vmin', fontWeight: 500 }}
+              >
+              <IoSearchSharp />
+            </IconContext.Provider>
+          </div>
+          <div className="control_icon">
+            <IconContext.Provider
+              value={{size: '2.3vmin', fontWeight: 500 }}
+            >
+              <RiSettings4Fill />
+            </IconContext.Provider>
+          </div>
+        </div>
         <div className="learn_more">
-        
+          {/* <FormGroup row>
+          <FormControlLabel control={<Switch />}/>
+          </FormGroup> */}
         </div>
       </div>
     )

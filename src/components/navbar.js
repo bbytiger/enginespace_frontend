@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button } from '@material-ui/core'
 import NavLogo from '../assets/nav_logo.png'
 
 class NavBar extends React.Component {
@@ -17,10 +16,11 @@ class NavBar extends React.Component {
           <a href="/developers" className="top_nav">Developers</a>
           <a href="/company" className="top_nav">Company</a>
           <a href="/pricing" className="top_nav">Pricing</a>
+          <a href="/blog" className="top_nav">Community</a>
         </div>
-        <div className="dashboard">
+        {/* <div className="dashboard">
             <Button className="dashboard_button">Dashboard</Button>
-        </div>
+        </div> */}
       </div>
     )
   }
