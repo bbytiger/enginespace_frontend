@@ -13,17 +13,19 @@ class Greeting extends React.Component {
   render() {
     return (
       /* a theme switcher here */
-      <div className="greetings">
-        <div className="center_text">
-          <div className="escape_layout">
-            <h1 className="header">
-              EngineSpace
-            </h1>
-            <p className="catchphrase">The smartest bots on the internet</p>
+      <div className="wrapper">
+        <div className="greetings">
+          <div className="center_text">
+            <div className="escape_layout">
+              <h1 className="header">
+                EngineSpace
+              </h1>
+              <p className="catchphrase">The smartest bots on the internet</p>
+            </div>
           </div>
-        </div>
-        <div className="logo_container">
-          <img src={this.state.theme === "light" ? LightLogo : DarkLogo} alt="EngineSpace Logo"/>
+          <div className="logo_container">
+            <img src={this.state.theme === "light" ? LightLogo : DarkLogo} alt="EngineSpace Logo"/>
+          </div>
         </div>
       </div>
     )
