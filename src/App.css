@@ -2,10 +2,12 @@
   text-align: center;
 }
 
+/* GREETINGS */
+
 .wrapper {
   height: 100vh;
-  animation: gradient 8s ease infinite;
-  background: linear-gradient(-45deg, #f7f7f7, #ffffff, #e0e0e0, #ececec);
+  animation: gradient 4s ease forwards;
+  background: linear-gradient(-45deg, #ffffff, #ffffff, #7db331);
   top: 0;
   left: 0;
   background-size: 400% 400%;
@@ -108,6 +110,85 @@
 
 @keyframes gradient {
   0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+  100%{background-position:100% 50%}
+}
+
+/* NAVBAR */
+
+.link_container {
+  z-index: inherit;
+  padding-top: 3vmin;
+  padding-bottom: 3vmin;
+  width: 100vw;
+  text-align: center;
+}
+
+.navbar {
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 100vw;
+}
+
+.top_nav {
+  padding-bottom: 2.4vmin;
+  padding-top: 2.5vmin;
+  padding-right: 3vmin;
+  padding-left: 3vmin;
+}
+
+.link_container a:link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.link_container a:visited {
+  color: #000000;
+}
+
+.link_container a:hover {
+  opacity: 0.5;
+  transition: opacity .25s ease-in-out;
+}
+
+.dashboard {
+  width: 100vw;
+  padding-top: 2.1vmin;
+  padding-bottom: 2.1vmin;
+  position: absolute;
+  text-align: right;
+}
+
+.dashboard_button {
+  z-index: 20;
+  margin-right: 10vmin !important;
+}
+
+.nav_logo {
+  z-index: 30;
+  position: absolute;
+  padding-top: 2.4vmin;
+  padding-bottom: 3vmin;
+  padding-left: 8vmin !important;
+  
+}
+
+.nav_logo a:link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.link_container a:visited {
+  color: #000000;
+}
+
+.nav_logo a:hover {
+  opacity: 0.5;
+  transition: opacity .25s ease-in-out;
+}
+
+.word_logo {
+  width: 18vmin;
+  height: auto;
 }

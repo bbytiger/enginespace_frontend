@@ -1,9 +1,13 @@
 import './App.css';
 import Greeting from './components/greeting.js'
+import NavBar from './components/navbar.js'
 
 function App() {
   return (
-    <Greeting />
+    <div>
+      <NavBar />
+      <Greeting />
+    </div>
   );
 }
 

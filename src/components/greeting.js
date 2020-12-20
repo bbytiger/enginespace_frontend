@@ -27,6 +27,9 @@ class Greeting extends React.Component {
             <img src={this.state.theme === "light" ? LightLogo : DarkLogo} alt="EngineSpace Logo"/>
           </div>
         </div>
+        <div className="learn_more">
+        
+        </div>
       </div>
     )
   }
