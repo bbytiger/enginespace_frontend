@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 /* GREETINGS */
 
 .wrapper {
@@ -195,7 +191,7 @@
   position: absolute;
   padding-top: 2.4vmin;
   padding-bottom: 3vmin;
-  padding-left: 5vmin !important;
+  padding-left: 3vmin !important;
 }
 
 .nav_logo a:link {

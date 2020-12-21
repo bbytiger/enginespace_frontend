@@ -1,12 +1,10 @@
 import './App.css';
-import Greeting from './components/greeting.js'
-import NavBar from './components/navbar.js'
+import AppRouter from './AppRouter'
 
 function App() {
   return (
     <div>
-      <NavBar />
-      <Greeting />
+      <AppRouter />
     </div>
   );
 }

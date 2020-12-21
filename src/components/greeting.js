@@ -1,4 +1,7 @@
 import React from 'react'
+import { withRouter } from "react-router-dom";
+
+// static assets
 import LightLogo from '../assets/logo_light.png'
 import DarkLogo from '../assets/logo_dark.png'
 import { RiSettings4Fill } from 'react-icons/ri';
@@ -6,7 +9,9 @@ import { IoSearchSharp, IoNotificationsSharp } from 'react-icons/io5';
 import { AiFillProfile } from 'react-icons/ai';
 import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
 import { IconContext } from 'react-icons';
-//import { FormGroup, FormControlLabel, Switch } from '@material-ui/core';
+
+// Project-Defined Components
+import NavBar from './navbar'
 
 class Greeting extends React.Component {
   constructor(props){
@@ -20,6 +25,7 @@ class Greeting extends React.Component {
     return (
       /* a theme switcher here */
       <div className="wrapper">
+        <NavBar />
         <div className="greetings">
           <div className="center_text">
             <div className="escape_layout">
@@ -66,7 +72,7 @@ class Greeting extends React.Component {
         <div className="learn_more down_bounce">
           <p className="learn_more_text">Take a tour</p>
           <div className="arrow" onClick={() => {
-            console.log("arrow was clicked")
+           this.props.history.push('/tour')
           }}>
             <IconContext.Provider
               value={{size: '6vmin', fontWeight: 500, padding: 0, opacity: 0.7}}
@@ -78,7 +84,7 @@ class Greeting extends React.Component {
         <div className="registration side_bounce">
           <span className="learn_more_text side_text">Take me in!</span>
           <div className="arrow" onClick={() => {
-            console.log("arrow was clicked")
+            this.props.history.push('/registration')
           }}>
             <IconContext.Provider
               value={{size: '6vmin', fontWeight: 500, padding: 0, opacity: 0.7}}
@@ -92,4 +98,4 @@ class Greeting extends React.Component {
   }
 }
 
-export default Greeting
+export default withRouter(Greeting)
