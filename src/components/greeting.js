@@ -2,7 +2,7 @@ import React from 'react'
 import LightLogo from '../assets/logo_light.png'
 import DarkLogo from '../assets/logo_dark.png'
 import { RiSettings4Fill } from 'react-icons/ri';
-import { IoSearchSharp } from 'react-icons/io5';
+import { IoSearchSharp, IoNotificationsSharp } from 'react-icons/io5';
 import { AiFillProfile } from 'react-icons/ai';
 import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
 import { IconContext } from 'react-icons';
@@ -34,6 +34,13 @@ class Greeting extends React.Component {
           </div>
         </div>
         <div className="control_panel">
+          <div className="control_icon">
+            <IconContext.Provider
+                value={{size: '2.3vmin', fontWeight: 500, padding: 0 }}
+              >
+              <IoNotificationsSharp />
+            </IconContext.Provider>
+          </div>
           <div className="control_icon">
             <IconContext.Provider
                 value={{size: '2.3vmin', fontWeight: 500, padding: 0 }}
