@@ -1,3 +1,8 @@
+/* declare variables */
+:root {
+  --gradientAngle: -12deg;
+}
+
 /* GREETINGS */
 
 .wrapper {
@@ -317,3 +322,99 @@
   opacity: 1;
   transition: opacity 250ms ease-in;
 }
+
+/* Registration */
+
+.registration_wrapper {
+  position: absolute;
+  overflow: hidden;
+}
+
+.registration_card {
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.registration_streak_one {
+  margin-top: 10vmin;
+  position: absolute;
+  transform: skewY(var(--gradientAngle));
+  -webkit-transform: skewY(var(--gradientAngle));
+  height: 20vh;
+  width: 100vw;
+  animation-direction: alternate;
+	animation: login_gradient 10s ease infinite;
+  background: linear-gradient(135deg, #ffffff, #8dc63f, #ffffff);
+}
+
+.registration_streak_two {
+  z-index: -1;
+  margin-top: 63vmin;
+  position: absolute;
+  transform: skewY(12deg);
+  -webkit-transform: skewY(12deg);
+  height: 27vh;
+  width: 100vw;
+  animation-direction: alternate;
+	animation: login_gradient 12s ease infinite;
+  background: linear-gradient(135deg, #000000, #8dc63f, #407c08);
+}
+
+@keyframes login_gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.terms_wrapper {
+  display: flex;
+  width: 100vw;
+  bottom: 1.3vmin;
+  position: absolute;
+  z-index: 20;
+}
+
+.terms {
+  margin: auto;
+  display: flex;
+}
+
+.terms p {
+  font-weight: 600;
+  padding: 0.3vmin;
+  font-size: 1.5vmin;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hover_opacity {
+  opacity: 0.7;
+}
+
+.hover_opacity:hover {
+  opacity: 1;
+}
+
+/* Login */
+
+.login {
+  z-index: 10;
+  margin: auto;
+  background: rgb(10 50 50 / 62%);
+  height: 60%;
+  width: 30%;
+  border-radius: 6px;
+}
+
+.login h1 {
+  margin: 0;
+}
+

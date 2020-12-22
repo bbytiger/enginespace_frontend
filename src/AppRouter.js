@@ -8,7 +8,6 @@ import Tour from './components/tour.js'
 function AppRouter() {
   return (
     <BrowserRouter>
-      <div className="app">
       <Route render={({ location }) => {
         return (
           <TransitionGroup>
@@ -25,13 +24,14 @@ function AppRouter() {
                 <Route exact path="/products"/>
                 <Route exact path="/developers"/>
                 <Route exact path="/company"/>
+                <Route exact path="/contact"/>
+                <Route exact path="/terms"/>
                 <Route exact path="/pricing"/>
                 <Route exact path="/community"/>
               </Switch>
             </CSSTransition>
           </TransitionGroup>
         )}} />
-      </div>
     </BrowserRouter>
   );
 }

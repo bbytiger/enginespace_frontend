@@ -4,14 +4,12 @@ import { withRouter } from "react-router-dom";
 // static assets
 import LightLogo from '../assets/logo_light.png'
 import DarkLogo from '../assets/logo_dark.png'
-import { RiSettings4Fill } from 'react-icons/ri';
-import { IoSearchSharp, IoNotificationsSharp } from 'react-icons/io5';
-import { AiFillProfile } from 'react-icons/ai';
 import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
 import { IconContext } from 'react-icons';
 
 // Project-Defined Components
 import NavBar from './navbar'
+import ControlPanel from './control'
 
 class Greeting extends React.Component {
   constructor(props){
@@ -39,36 +37,7 @@ class Greeting extends React.Component {
             <img src={this.state.theme === "light" ? LightLogo : DarkLogo} alt="EngineSpace Logo"/>
           </div>
         </div>
-        <div className="control_panel">
-          <div className="control_icon">
-            <IconContext.Provider
-                value={{size: '2.3vmin', fontWeight: 500, padding: 0 }}
-              >
-              <IoNotificationsSharp />
-            </IconContext.Provider>
-          </div>
-          <div className="control_icon">
-            <IconContext.Provider
-                value={{size: '2.3vmin', fontWeight: 500, padding: 0 }}
-              >
-              <AiFillProfile />
-            </IconContext.Provider>
-          </div>
-          <div className="control_icon">
-            <IconContext.Provider
-                value={{size: '2.3vmin', fontWeight: 500, padding: 0 }}
-              >
-              <IoSearchSharp />
-            </IconContext.Provider>
-          </div>
-          <div className="control_icon">
-            <IconContext.Provider
-              value={{size: '2.3vmin', fontWeight: 500, padding: 0 }}
-            >
-              <RiSettings4Fill />
-            </IconContext.Provider>
-          </div>
-        </div>
+        <ControlPanel />
         <div className="learn_more down_bounce">
           <p className="learn_more_text">Take a tour</p>
           <div className="arrow" onClick={() => {
