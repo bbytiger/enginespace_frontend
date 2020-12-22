@@ -27,11 +27,11 @@ class Registration extends React.Component {
         </div>
         <div className="terms_wrapper">
           <div className="terms">
-            <p className="hover_opacity" onClick={() => {this.props.history.push('/')}}>©EngineSpace</p>
-            <p>•</p>
-            <p className="hover_opacity" onClick={() => {this.props.history.push('/contact')}}>Contact</p>
-            <p>•</p>
-            <p className="hover_opacity" onClick={() => {this.props.history.push('/terms')}}>Terms and Conditions</p>
+            <span className="hover_opacity" onClick={() => {this.props.history.push('/')}}>©EngineSpace</span>
+            <span>•</span>
+            <span className="hover_opacity" onClick={() => {this.props.history.push('/contact')}}>Contact</span>
+            <span>•</span>
+            <span className="hover_opacity" onClick={() => {this.props.history.push('/terms')}}>Terms and Conditions</span>
           </div>
         </div>
       </div>

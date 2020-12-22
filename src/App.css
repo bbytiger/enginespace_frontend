@@ -359,7 +359,7 @@
   width: 100vw;
   animation-direction: alternate;
 	animation: login_gradient 12s ease infinite;
-  background: linear-gradient(135deg, #000000, #8dc63f, #407c08);
+  background: linear-gradient(135deg, #1d310d, #8dc63f, #407c08);
 }
 
 @keyframes login_gradient {
@@ -377,7 +377,7 @@
 .terms_wrapper {
   display: flex;
   width: 100vw;
-  bottom: 1.3vmin;
+  bottom: 1.5vmin;
   position: absolute;
   z-index: 20;
 }
@@ -387,7 +387,7 @@
   display: flex;
 }
 
-.terms p {
+.terms span {
   font-weight: 600;
   padding: 0.3vmin;
   font-size: 1.5vmin;
@@ -396,25 +396,83 @@
 }
 
 .hover_opacity {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .hover_opacity:hover {
+  cursor: pointer;
+  transition: opacity .25s ease-in-out;
   opacity: 1;
 }
 
 /* Login */
 
 .login {
+  font-weight: 600;
+  font-size: 1.5vmin;
+  padding: 3vmin;
+  display: flex;
+  flex-direction: column;
   z-index: 10;
   margin: auto;
-  background: rgb(10 50 50 / 62%);
+  background: rgb(10 50 50 / 90%);
   height: 60%;
-  width: 30%;
+  width: 25%;
   border-radius: 6px;
+  box-shadow: 0 15px 35px 0 rgba(60,66,87,.08), 0 5px 15px 0 rgba(0,0,0,.12);
 }
 
 .login h1 {
+  font-size: 2.5vmin;
+  color: #adef5d;
+  text-align: center;
+  margin: 2vmin;
+}
+
+.logo_wrapper {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  width: 10vmin;
+  height: 10vmin;
+  border-radius: 50%;
+  background-color: rgb(149 200 150 / 10%);
+  box-shadow: 0 15px 35px 0 rgba(60,66,87,.08), 0 5px 15px 0 rgba(0,0,0,.12);
+}
+
+.login img {
+  margin: auto;
+  display: block;
+  max-width: 6vmin;
+  width: auto;
+  height: auto;
+}
+
+.login_connect {
+  text-align: center;
+  flex: 0.2 0 auto;
   margin: 0;
+}
+
+.login_connect::before, .login_connect::after {
+  box-sizing: border-box;
+  content: "";
+  border-bottom: 1px solid white;
+  flex: 1 0 auto;
+  height: .5em;
+  width: 100px;
+  margin: 0;
+}
+
+.forgot_password {
+  opacity: 0.7;
+  color:#adef5d;
+}
+
+.forgot_password:hover {
+  cursor: pointer;
+  transition: opacity .25s ease-in-out;
+  color: #adef5d;
+  opacity: 1;
 }
 
